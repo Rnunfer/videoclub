@@ -29,6 +29,11 @@
 		<div class="col-md-6" th:text="#{categoria.conteoPeliculas}"></div>
 		<div class="col-md-6" th:text="${categoriaDTO.conteoPeliculas}"></div>
 	</div>
+	<div class="row" th:each="numeroPeliculas : ${categoriaDTO.numeroPeliculasAlmacen}">
+		<div th:if="${numeroPeliculas.id} != 0" class="col-md-6" th:text="Almacén + ' ' + ${numeroPeliculas.id}"></div>
+		<div th:if="${numeroPeliculas.id} == 0" class="col-md-6" th:text="#{categoria.alquiler}"></div>
+		<div class="col-md-6" th:text="${numeroPeliculas.numeroPeliculas}"></div>
+	</div>
 </div>
 </body>
 </html>

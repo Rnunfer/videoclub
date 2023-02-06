@@ -21,7 +21,9 @@ public class CategoriaService {
 	}
 	
 	public CategoriaDTO oneDTO(Long id) {
-		return categoriaRepository.findDTO(id); 
+		CategoriaDTO cat = categoriaRepository.findDTO(id);
+		cat.setNumeroPeliculasAlmacen(categoriaRepository.listarNumeroPeliculasAlmacen(cat.getId()));
+		return cat;
 	}
 
 }

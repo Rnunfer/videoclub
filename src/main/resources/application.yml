@@ -1,0 +1,19 @@
+app:
+  videoclub_examen:
+    array:
+      clasificaciones: G,PG,PG-13,R,NC-17
+    set:
+      clasificaciones: '{''Trailers'',''Commentaries'',''Deleted Scenes'',''Behind
+        the Scenes''}'
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-timeout: 60000
+      maximum-pool-size: 5
+    password: usuario
+    url: jdbc:mysql://localhost:3306/videoclub_examen
+    username: usuario
+  messages:
+    basename: messages
+    encoding: ISO-8859-1
